@@ -1,0 +1,13 @@
+<h2>Detail Character</h2>
+
+<div *ngIf="character">
+  <h3>{{ character.name }}</h3>
+  <img [src]="character.photoUrl" [alt]="character.name">
+  <p><strong>Affiliation:</strong> {{ character.affiliation }}</p>
+  <p><strong>Allies:</strong> {{ character.allies.join(', ') }}</p>
+  <p><strong>Enemies:</strong> {{ character.enemies.join(', ') }}</p>
+</div>
+
+<div *ngIf="!character">
+  <p>Loading character...</p>
+</div>

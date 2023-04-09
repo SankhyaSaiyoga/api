@@ -1,0 +1,6 @@
+<h2>List of Characters</h2>
+
+<div *ngFor="let character of characters">
+  <h3>{{ character.name }}</h3>
+  <a [routerLink]="['/characters', character.id]">View</a>
+</div>
